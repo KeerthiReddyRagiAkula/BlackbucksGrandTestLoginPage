@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <Style>
+        body{
+        color: grey;
+        border: solid 5px blue;
+        margin-top: 50px;
+        margin-left: 25%;
+        margin-right:25%;
+        }
+        h1{
+            margin-top:50px;
+            color: blue;
+        }
+        input{
+            border:none;
+            border-bottom: 1px solid gray;
+        }
+        #username{
+            margin-top: 40px;
+        }
+        #password{
+            margin-top:40px;
+        }
+        #button{
+            margin-top: 40px;
+            padding: 5px 20px 5px 20px;
+            border:solid 5px blue;
+        }
+        .signup{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    </Style>
+    <title>Login Page</title>
+</head>
+<body>
+    <center>
+    <h1>Login Page</h1>
+    <hr/>
+  
+        <form onsubmit="return validation(this)">
+            Username&nbsp;&nbsp;<input type="text" name="username" minlength="8" id="username"/><br/>
+            Password&nbsp;&nbsp;<input type="password" name="password" minlength="6" id="password"/><br/>
+            <button type="submit" id="button">Login</button><br/>
+            <div class="signup">Not a Member?<a href="#">Signup</a></div>
+        </form>
+    </center>
+    <!--<script src="script.js"></script>-->
+    <script>
+        
+    function validation(form){
+        var username=form.username.value;
+        var password=form.password.value;
+        if(username.length===0){
+            alert("Enter valid username");
+            return false;
+        }
+        if(password.length===0){
+            alert("Enter valid password");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>
